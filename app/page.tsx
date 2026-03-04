@@ -1,30 +1,31 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   const erpModules = [
     {
       title: "Prime POS",
-      icon: "🛒",
+      logo: "/modules/pos.png",
       description: "Complete point-of-sale solution for retail and restaurant management with real-time inventory tracking."
     },
     {
       title: "Prime Fleet",
-      icon: "🚚",
+      logo: "/modules/fleet.png",
       description: "Advanced logistics and GPS tracking system for fleet management and route optimization."
     },
     {
       title: "Prime HR & Payroll",
-      icon: "👥",
+      logo: "/modules/payroll.png",
       description: "Comprehensive human resource management with automated payroll processing and employee self-service."
     },
     {
       title: "Prime Accounting",
-      icon: "💰",
+      logo: "/modules/account.png",
       description: "Full-featured accounting software with financial reporting, invoicing, and expense management."
     },
     {
       title: "Prime Analytics",
-      icon: "📊",
+      logo: "/modules/ai.png",
       description: "AI-powered business intelligence with predictive analytics and customizable dashboards."
     }
   ];
@@ -51,20 +52,28 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-linear-to-br from-blue-50 via-white to-blue-50 py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Enterprise Software Solutions
-              <span className="block text-blue-600 mt-2">Built for African Businesses</span>
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <Image
+          src="/hero-image.jpg"
+          alt="PrimeX background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Integrated ERP & AI Solutions
+              <span className="block text-white/90 mt-2">Built for African Industries</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your business operations with PrimeX's integrated ERP ecosystem. 
-              Streamline processes, boost productivity, and drive growth with our comprehensive suite of business tools.
+            <p className="text-xl text-white/90 mb-8 max-w-3xl">
+              PrimeX Ltd develops integrated enterprise software that helps organizations manage operations, HR,
+              finance, inventory, and analytics from one unified platform.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:justify-start">
               <Link
-                href="/book-demo"
+                href="/contact"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Book a Demo
@@ -89,12 +98,12 @@ export default function Home() {
                 About PrimeX Ltd
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                We are a leading technology company specializing in integrated enterprise software solutions. 
-                Our mission is to empower African businesses with world-class ERP tools that drive efficiency and growth.
+                PrimeX is a technology company focused on building scalable, secure, and user-friendly digital solutions
+                for modern organizations.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                With years of experience and a deep understanding of local business needs, we've built a comprehensive 
-                ecosystem that adapts to your unique requirements.
+                By centralizing data and automating core processes, we help businesses improve productivity,
+                strengthen decision-making, and achieve long-term digital transformation.
               </p>
               <Link
                 href="/about"
@@ -108,20 +117,20 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-gray-600">Active Clients</div>
+                <div className="text-lg font-bold text-blue-600 mb-2">System Training</div>
+                <div className="text-gray-600">Hands-on onboarding for your entire team.</div>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime</div>
+                <div className="text-lg font-bold text-blue-600 mb-2">User Guides</div>
+                <div className="text-gray-600">Step-by-step guides for daily operations.</div>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support</div>
+                <div className="text-lg font-bold text-blue-600 mb-2">Documentation</div>
+                <div className="text-gray-600">Detailed product and setup documentation.</div>
               </div>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">15+</div>
-                <div className="text-gray-600">Countries</div>
+                <div className="text-lg font-bold text-blue-600 mb-2">Video Tutorials</div>
+                <div className="text-gray-600">Quick videos to train users faster.</div>
               </div>
             </div>
           </div>
@@ -136,7 +145,7 @@ export default function Home() {
               Our ERP Ecosystem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Five powerful modules working together to give you complete control over your business operations.
+              A modular ecosystem designed to manage business operations through one centralized and intelligent platform.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -145,7 +154,15 @@ export default function Home() {
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200 border border-gray-100"
               >
-                <div className="text-5xl mb-4">{module.icon}</div>
+                <div className="mb-4">
+                  <Image
+                    src={module.logo}
+                    alt={`${module.title} logo`}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{module.title}</h3>
                 <p className="text-gray-600">{module.description}</p>
               </div>
@@ -198,11 +215,11 @@ export default function Home() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of businesses already using PrimeX to streamline their operations and boost productivity.
+            Partner with PrimeX to modernize operations, improve transparency, and scale with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/book-demo"
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Request a Demo

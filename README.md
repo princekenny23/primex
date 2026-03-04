@@ -16,7 +16,7 @@ A clean, professional corporate website for PrimeX Ltd, built with Next.js 14, T
 - ✅ SEO optimized
 - ✅ Fast page loads
 - ✅ Contact form with API route
-- ✅ Demo booking system
+- ✅ Demo booking via Contact page + WhatsApp
 - ✅ 5 ERP module showcase pages
 - ✅ Privacy Policy & Terms of Service pages
 
@@ -27,9 +27,7 @@ primex-website/
 ├── app/
 │   ├── about/              # About page
 │   ├── api/
-│   │   ├── book-demo/      # Demo booking API
 │   │   └── contact/        # Contact form API
-│   ├── book-demo/          # Book demo page
 │   ├── contact/            # Contact page
 │   ├── erp/                # ERP ecosystem page
 │   ├── privacy/            # Privacy policy
@@ -84,7 +82,7 @@ primex-website/
 
 ## 📧 Email Configuration (Contact Forms)
 
-The contact and demo booking forms currently log submissions to the console. To enable email functionality:
+The contact form currently logs submissions to the console. To enable email functionality:
 
 ### Option 1: Using Nodemailer
 
@@ -96,7 +94,6 @@ The contact and demo booking forms currently log submissions to the console. To 
 
 2. Uncomment the email code in:
    - `app/api/contact/route.ts`
-   - `app/api/book-demo/route.ts`
 
 3. Configure SMTP credentials in `.env.local`
 

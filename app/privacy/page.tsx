@@ -70,9 +70,9 @@ export default function PrivacyPage() {
             <p>
               If you have questions about this Privacy Policy, please contact us at:
               <br />
-              Email: privacy@primexltd.com
+              Email: primexltd876@gmail.com
               <br />
-              Phone: +XXX XXX XXXX
+              Phone: +265 997575865
             </p>
           </section>
         </div>

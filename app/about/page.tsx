@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us - PrimeX Ltd',
@@ -9,19 +10,23 @@ export default function AboutPage() {
   const values = [
     {
       title: "Innovation",
-      description: "We continuously evolve our solutions to meet the changing needs of modern businesses."
+      description: "Building modern, forward-thinking systems."
     },
     {
       title: "Excellence",
-      description: "We deliver high-quality products and services that exceed customer expectations."
+      description: "Delivering high-quality, reliable solutions."
+    },
+    {
+      title: "Scalability",
+      description: "Designing systems that grow with clients' needs."
+    },
+    {
+      title: "Impact",
+      description: "Creating technology that solves real-world problems."
     },
     {
       title: "Integrity",
-      description: "We build trust through transparency, honesty, and ethical business practices."
-    },
-    {
-      title: "Partnership",
-      description: "We succeed when our clients succeed, building long-term collaborative relationships."
+      description: "Operating with transparency and trust."
     }
   ];
 
@@ -47,14 +52,22 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-linear-to-brfrom-blue-50 via-white to-blue-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 overflow-hidden">
+        <Image
+          src="/hero-bg.jpg"
+          alt="PrimeX background"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               About PrimeX Ltd
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Empowering African businesses with world-class enterprise software solutions
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Lead provider of integrated artificial intelligence and innovative digital solutions
             </p>
           </div>
         </div>
@@ -67,17 +80,15 @@ export default function AboutPage() {
             <div className="bg-blue-50 p-8 rounded-lg">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-lg text-gray-600">
-                To empower African businesses with integrated enterprise software solutions that drive 
-                efficiency, productivity, and sustainable growth. We believe every business deserves 
-                access to world-class tools that are tailored to their unique needs and local context.
+                To partner with organizations to understand their needs and build intelligent systems
+                that support long-term growth, operational transparency, and sustainable digital transformation.
               </p>
             </div>
             <div className="bg-blue-50 p-8 rounded-lg">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
               <p className="text-lg text-gray-600">
-                To become Africa's leading provider of integrated ERP solutions, recognized for 
-                innovation, reliability, and exceptional customer service. We envision a future where 
-                every African business, regardless of size, has the tools to compete globally.
+                Empowering industries with efficient, user-friendly, and scalable artificial intelligence
+                technologies.
               </p>
             </div>
           </div>
@@ -93,25 +104,21 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                PrimeX Ltd was founded with a simple yet powerful vision: to transform how African 
-                businesses operate through technology. We recognized that many existing ERP solutions 
-                were not designed with African businesses in mind, often lacking local compliance 
-                features, currency support, and the flexibility needed for diverse markets.
+                PrimeX Ltd is focused on developing integrated enterprise software solutions that help
+                organizations manage operations efficiently from a single, unified platform.
               </p>
               <p>
-                Starting with a small team of passionate developers and business analysts, we spent 
-                years understanding the unique challenges faced by African businesses across different 
-                sectors. This research formed the foundation of our integrated ERP ecosystem.
+                Our systems bring together key business functions—including operations, human resources,
+                finance, inventory, and analytics—eliminating fragmented tools and manual processes that
+                slow growth.
               </p>
               <p>
-                Today, we serve over 500 active clients across 15+ countries, helping them streamline 
-                operations, reduce costs, and scale their businesses. Our success is measured not by 
-                the features we build, but by the tangible impact we have on our clients' bottom line.
+                We design secure and user-friendly digital solutions that provide real-time insights and
+                streamline workflows to improve performance.
               </p>
               <p>
-                As we continue to grow, our commitment remains unchanged: to build software that truly 
-                serves the needs of African businesses, backed by exceptional support and a deep 
-                understanding of local markets.
+                At PrimeX, we go beyond software development by partnering with clients and building
+                systems that support measurable and sustainable digital transformation.
               </p>
             </div>
           </div>
@@ -124,10 +131,10 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Our Core Values
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-white font-bold">{value.title[0]}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -156,7 +163,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-blue-600">
+      <section className="py-16 bg-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
             <div>
@@ -181,3 +188,4 @@ export default function AboutPage() {
     </>
   );
 }
+

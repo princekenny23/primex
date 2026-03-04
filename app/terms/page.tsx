@@ -73,9 +73,9 @@ export default function TermsPage() {
             <p>
               For questions about these Terms of Service, please contact:
               <br />
-              Email: legal@primexltd.com
+              Email: primexltd876@gmail.com
               <br />
-              Phone: +XXX XXX XXXX
+              Phone: +265 997575865
             </p>
           </section>
         </div>
