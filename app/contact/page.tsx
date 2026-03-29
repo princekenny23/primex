@@ -61,8 +61,8 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <Image
-          src="/hero-bg.jpg"
-          alt="PrimeX background"
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzaW5lc3MscHJvZmVzc2lvbmFsLHRlY2h8fHx8fHwxNzc0Nzg2NTg4&ixlib=rb-4.0.3&q=80&w=1920"
+          alt="Modern workspace with technology"
           fill
           className="object-cover"
           priority

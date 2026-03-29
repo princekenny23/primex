@@ -69,7 +69,7 @@ primex-website/
    SMTP_PORT=587
    SMTP_USER=your-smtp-username
    SMTP_PASS=your-smtp-password
-   SMTP_FROM=noreply@primexltd.com
+   SMTP_FROM=primexltd876@gmail.com
    ```
 
 3. **Run development server:**
@@ -198,7 +198,7 @@ SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=your-username
 SMTP_PASS=your-password
-SMTP_FROM=noreply@primexltd.com
+SMTP_FROM=primexltd876@gmail.com
 
 # Or use a service like SendGrid/Resend
 SENDGRID_API_KEY=your-api-key
@@ -209,7 +209,7 @@ RESEND_API_KEY=your-api-key
 ## 🤝 Support
 
 For issues or questions:
-- Email: support@primexltd.com
+- Email: primexltd876@gmail.com
 - Website: [www.primexltd.com](https://www.primexltd.com)
 
 ## 📄 License

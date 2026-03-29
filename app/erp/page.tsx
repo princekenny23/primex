@@ -108,18 +108,44 @@ export default function ERPPage() {
     }
   ];
 
+  const moduleCardStyles = [
+    'bg-blue-50 border-blue-100',
+    'bg-indigo-50 border-indigo-100',
+    'bg-violet-50 border-violet-100',
+    'bg-sky-50 border-sky-100',
+    'bg-cyan-50 border-cyan-100',
+  ];
+
+  const benefitCardStyles = [
+    'bg-blue-50 border-blue-100',
+    'bg-indigo-50 border-indigo-100',
+    'bg-violet-50 border-violet-100',
+    'bg-sky-50 border-sky-100',
+    'bg-cyan-50 border-cyan-100',
+    'bg-teal-50 border-teal-100',
+  ];
+
+  const iconChipStyles = [
+    'bg-blue-100 text-blue-900',
+    'bg-indigo-100 text-indigo-900',
+    'bg-violet-100 text-violet-900',
+    'bg-sky-100 text-sky-900',
+    'bg-cyan-100 text-cyan-900',
+    'bg-teal-100 text-teal-900',
+  ];
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-24 overflow-hidden">
         <Image
-          src="/hero-bg.jpg"
-          alt="PrimeX background"
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzaW5lc3MscHJvZmVzc2lvbmFsLHRlY2h8fHx8fHwxNzc0Nzg2NTg4&ixlib=rb-4.0.3&q=80&w=1920"
+          alt="Modern team collaborating in office"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/65 via-black/45 to-black/60" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -129,19 +155,22 @@ export default function ERPPage() {
               Five powerful modules working together to streamline your entire business operation. 
               Choose what you need, integrate seamlessly, and scale as you grow.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-blue-900 text-white px-8 py-3 rounded-lg hover:bg-blue-950 transition-colors duration-200 font-semibold"
-            >
-              Book a Demo
-            </Link>
+
           </div>
         </div>
       </section>
 
       {/* Modules Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-linear-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Explore Every Module
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Each module is powerful on its own and even more valuable when connected as one unified ecosystem.
+            </p>
+          </div>
           <div className="space-y-16">
             {modules.map((module, index) => (
               <div
@@ -151,21 +180,21 @@ export default function ERPPage() {
                 }`}
               >
                 <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                  <div className="mb-4">
+                  <div className="mb-5 inline-flex items-center justify-center w-18 h-18 rounded-2xl bg-white border border-gray-200 shadow-sm">
                     <Image
                       src={module.logo}
                       alt={`${module.name} logo`}
                       width={72}
                       height={72}
-                      className="w-16 h-16 md:w-18 md:h-18 object-contain"
+                      className="w-14 h-14 object-contain"
                     />
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-2">{module.name}</h2>
-                  <p className="text-blue-900 font-semibold mb-4">{module.tagline}</p>
-                  <p className="text-lg text-gray-600 mb-6">{module.description}</p>
+                  <p className="text-blue-900 font-semibold mb-4 tracking-wide">{module.tagline}</p>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">{module.description}</p>
                   <Link
                     href="/contact"
-                    className="text-blue-900 hover:text-blue-950 font-semibold inline-flex items-center"
+                    className="text-blue-900 hover:text-blue-950 font-semibold inline-flex items-center transition-all duration-200 hover:translate-x-0.5"
                   >
                     Learn more
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,13 +203,13 @@ export default function ERPPage() {
                   </Link>
                 </div>
                 <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                  <div className="bg-gray-50 p-8 rounded-lg">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
+                  <div className={`p-8 rounded-2xl border shadow-md shadow-gray-200/50 ${moduleCardStyles[index % moduleCardStyles.length]}`}>
+                    <h3 className="text-xl font-bold text-gray-900 mb-5">Key Features</h3>
                     <ul className="space-y-3">
                       {module.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
                           <svg
-                            className="w-6 h-6 text-blue-900 mr-3 shrink-0"
+                            className="w-6 h-6 text-blue-900 mr-3 shrink-0 mt-0.5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -205,7 +234,7 @@ export default function ERPPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -217,14 +246,14 @@ export default function ERPPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={index} className={`p-7 rounded-2xl border shadow-md shadow-gray-300/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 ${benefitCardStyles[index % benefitCardStyles.length]}`}>
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${iconChipStyles[index % iconChipStyles.length]}`}>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -232,7 +261,7 @@ export default function ERPPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-linear-to-r from-blue-900 to-blue-950">
+      <section className="py-20 bg-linear-to-r from-blue-900 to-blue-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -243,7 +272,7 @@ export default function ERPPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-semibold"
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-semibold shadow-lg"
             >
               Book a Demo
             </Link>
