@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About Us - PrimeX Ltd',
-  description: 'Learn about PrimeX Ltd, a leading technology company specializing in integrated enterprise software solutions for African businesses.',
+  description: 'Learn about PrimeX Ltd and how we build PrimeX ERP with integrated eCommerce, WaaS services, and mobile app solutions for modern businesses.',
 };
 
 export default function AboutPage() {
@@ -30,25 +30,6 @@ export default function AboutPage() {
     }
   ];
 
-  const team = [
-    {
-      role: "Executive Team",
-      description: "Seasoned leaders with decades of combined experience in enterprise software and African markets."
-    },
-    {
-      role: "Engineering Team",
-      description: "World-class developers committed to building robust, scalable, and secure solutions."
-    },
-    {
-      role: "Support Team",
-      description: "Dedicated professionals providing 24/7 assistance to ensure your business never stops."
-    },
-    {
-      role: "Sales Team",
-      description: "Consultative experts who understand your business needs and recommend tailored solutions."
-    }
-  ];
-
   return (
     <>
       {/* Hero Section */}
@@ -67,7 +48,7 @@ export default function AboutPage() {
               About PrimeX Ltd
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Lead provider of integrated artificial intelligence and innovative digital solutions
+              Building practical digital products including PrimeX ERP with integrated eCommerce, WaaS, and mobile applications
             </p>
           </div>
         </div>
@@ -104,17 +85,17 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                PrimeX Ltd is focused on developing integrated enterprise software solutions that help
-                organizations manage operations efficiently from a single, unified platform.
+                PrimeX Ltd is focused on developing PrimeX ERP, a unified platform that helps organizations
+                manage operations efficiently with integrated eCommerce capabilities.
               </p>
               <p>
-                Our systems bring together key business functions—including operations, human resources,
-                finance, inventory, and analytics—eliminating fragmented tools and manual processes that
-                slow growth.
+                Our ecosystem brings together key business functions including operations, human resources,
+                finance, inventory, analytics, and online sales, eliminating fragmented tools and manual
+                processes that slow growth.
               </p>
               <p>
-                We design secure and user-friendly digital solutions that provide real-time insights and
-                streamline workflows to improve performance.
+                We also deliver WaaS and mobile app development services to help businesses extend their
+                digital reach while keeping operations connected.
               </p>
               <p>
                 At PrimeX, we go beyond software development by partnering with clients and building
@@ -139,23 +120,6 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Our Team
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{member.role}</h3>
-                <p className="text-gray-600">{member.description}</p>
               </div>
             ))}
           </div>

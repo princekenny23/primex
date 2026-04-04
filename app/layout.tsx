@@ -10,9 +10,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PrimeX Ltd - Enterprise ERP Solutions",
-  description: "Integrated enterprise software solutions designed for modern businesses. Streamline your operations with our comprehensive ERP ecosystem.",
-  keywords: ["ERP", "Enterprise Software", "Business Solutions", "POS", "Fleet Management", "HR", "Payroll", "Accounting"],
+  title: "PrimeX Ltd - Business Solutions for Modern Companies",
+  description: "PrimeX Ltd provides ERP systems, Website as a Service (WaaS), SaaS-ready platforms, and website management services for modern businesses.",
+  keywords: ["ERP", "Enterprise Resource Planning", "Business Solutions", "WaaS", "Website as a Service", "SaaS", "Software as a Service", "Website Management", "POS", "Fleet Management", "HR", "Payroll", "Accounting"],
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

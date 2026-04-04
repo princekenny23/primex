@@ -2,32 +2,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Home() {
-  const erpModules = [
+  const services = [
     {
-      title: "Prime POS",
-      logo: "/modules/pos.png",
-      description: "Complete point-of-sale solution for retail and restaurant management with real-time inventory tracking."
+      title: "PrimeX ERP (Under Development)",
+      description: "A unified ERP platform in active development that includes eCommerce capabilities and connects operations, finance, inventory, and reporting in one intelligent workflow.",
     },
     {
-      title: "Prime Fleet",
-      logo: "/modules/fleet.png",
-      description: "Advanced logistics and GPS tracking system for fleet management and route optimization."
+      title: "WaaS (Website as a Service)",
+      description: "Subscription-based website delivery where PrimeX designs, hosts, and continuously improves your website as a managed service.",
     },
     {
-      title: "Prime HR & Payroll",
-      logo: "/modules/payroll.png",
-      description: "Comprehensive human resource management with automated payroll processing and employee self-service."
+      title: "PrimePOS",
+      description: "Smart point-of-sale solution for retail and restaurant businesses with fast billing, inventory control, and sales tracking.",
+      ctaLabel: "Book Demo",
+      ctaHref: "/contact",
     },
-    {
-      title: "Prime Accounting",
-      logo: "/modules/account.png",
-      description: "Full-featured accounting software with financial reporting, invoicing, and expense management."
-    },
-    {
-      title: "Prime Analytics",
-      logo: "/modules/ai.png",
-      description: "AI-powered business intelligence with predictive analytics and customizable dashboards."
-    }
   ];
 
   const whyChoose = [
@@ -64,25 +53,25 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Integrated ERP & AI Solutions
-              <span className="block text-white/90 mt-2">Built for African Industries</span>
+              Transform Your Business with Smart Digital Solutions
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl">
-              PrimeX Ltd develops integrated enterprise software that helps organizations manage operations, HR,
-              finance, inventory, and analytics from one unified platform.
+              PrimeX Ltd is your trusted business partner, helping you streamline operations, increase revenue,
+              and scale with confidence through PrimeX ERP (under development) with eCommerce capabilities,
+              Website-as-a-Service (WaaS), and mobile app development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:justify-start">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                Book a Demo
+                Talk to PrimeX
               </Link>
               <Link
                 href="/erp"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
-                Explore ERP Ecosystem
+                Explore ERP Solutions
               </Link>
             </div>
           </div>
@@ -98,12 +87,12 @@ export default function Home() {
                 About PrimeX Ltd
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                PrimeX is a technology company focused on building scalable, secure, and user-friendly digital solutions
-                for modern organizations.
+                PrimeX is a technology company delivering scalable business solutions through PrimeX ERP with built-in
+                eCommerce capabilities, WaaS, and mobile app development.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                By centralizing data and automating core processes, we help businesses improve productivity,
-                strengthen decision-making, and achieve long-term digital transformation.
+                We help businesses improve productivity, maintain stronger online operations, and support long-term digital
+                growth with reliable systems and practical service delivery.
               </p>
               <Link
                 href="/about"
@@ -115,81 +104,69 @@ export default function Home() {
                 </svg>
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-lg font-bold text-blue-600 mb-2">System Training</div>
-                <div className="text-gray-600">Hands-on onboarding for your entire team.</div>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-lg font-bold text-blue-600 mb-2">User Guides</div>
-                <div className="text-gray-600">Step-by-step guides for daily operations.</div>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-lg font-bold text-blue-600 mb-2">Documentation</div>
-                <div className="text-gray-600">Detailed product and setup documentation.</div>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <div className="text-lg font-bold text-blue-600 mb-2">Video Tutorials</div>
-                <div className="text-gray-600">Quick videos to train users faster.</div>
+            <div className="relative min-h-80 overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/hero-image.jpg"
+                alt="PrimeX technology solutions dashboard"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-blue-950/70 via-blue-900/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                <div className="inline-flex items-center rounded-full bg-white/15 px-3 py-1 text-sm font-semibold text-white backdrop-blur-sm">
+                  Digital Solutions Built for Growth
+                </div>
+                <p className="mt-4 max-w-md text-lg text-white/90">
+                  PrimeX combines operational software and managed web services to help businesses run with clarity and confidence.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ERP Modules Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Services Section */}
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our ERP Ecosystem
+              Our Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A modular ecosystem designed to manage business operations through one centralized and intelligent platform.
+              PrimeX delivers practical digital services that help businesses operate better, sell more, and scale confidently.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {erpModules.map((module, index) => (
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-200 border border-gray-100"
+                className="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200"
               >
-                <div className="mb-4">
-                  <Image
-                    src={module.logo}
-                    alt={`${module.title} logo`}
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 object-contain"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{module.title}</h3>
-                <p className="text-gray-600">{module.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
+                {service.ctaLabel && service.ctaHref && (
+                  <Link
+                    href={service.ctaHref}
+                    className="inline-block mt-6 bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-semibold"
+                  >
+                    {service.ctaLabel}
+                  </Link>
+                )}
               </div>
             ))}
-            <div className="bg-linear-to-br from-blue-600 to-blue-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 flex flex-col justify-center items-center text-center text-white">
-              <h3 className="text-xl font-bold mb-3">Explore All Modules</h3>
-              <p className="mb-4">Discover how our integrated ecosystem can transform your business</p>
-              <Link
-                href="/erp"
-                className="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition-colors duration-200 font-semibold"
-              >
-                View Details
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Why Choose PrimeX Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose PrimeX?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're more than just software - we're your partner in business growth.
+              We deliver practical business solutions backed by local insight and reliable support.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

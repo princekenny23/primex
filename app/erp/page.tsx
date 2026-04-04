@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'ERP Ecosystem - PrimeX Ltd',
-  description: 'Explore PrimeX\'s comprehensive ERP ecosystem including Prime POS, Fleet, HR & Payroll, Accounting, and Analytics.',
+  description: 'Explore PrimeX\'s comprehensive ERP ecosystem including POS, Fleet, HR & Payroll, Accounting, Analytics, and eCommerce.',
 };
 
 export default function ERPPage() {
@@ -77,6 +77,20 @@ export default function ERPPage() {
         "Data visualization",
         "AI-powered insights",
         "Cross-module analytics"
+      ]
+    },
+    {
+      name: "Prime eCommerce",
+      logo: "/icon.png",
+      tagline: "Integrated Online Store Management",
+      description: "Launch and manage digital storefronts directly inside PrimeX ERP. Sync products, orders, inventory, and customer data in real time.",
+      features: [
+        "Integrated product catalog",
+        "Order and fulfillment management",
+        "Inventory sync with ERP",
+        "Secure checkout workflows",
+        "Customer account management",
+        "Sales and conversion analytics"
       ]
     }
   ];
@@ -152,7 +166,7 @@ export default function ERPPage() {
               Our ERP Ecosystem
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Five powerful modules working together to streamline your entire business operation. 
+              Six powerful modules working together to streamline your entire business operation. 
               Choose what you need, integrate seamlessly, and scale as you grow.
             </p>
 
