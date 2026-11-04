@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - PrimeX Ltd',
-  description: 'Terms of Service for PrimeX Ltd',
+  title: 'Terms of Service',
+  description: 'Terms of Service for Primex Technologies.',
 };
 
 export default function TermsPage() {
@@ -17,7 +17,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
             <p>
-              By accessing and using the PrimeX Ltd website and services, you accept and agree to be bound by 
+              By accessing and using the Primex Technologies website and services, you accept and agree to be bound by
               the terms and provisions of this agreement.
             </p>
           </section>
@@ -25,7 +25,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Use License</h2>
             <p>
-              Permission is granted to temporarily access the materials on PrimeX Ltd's website for personal, 
+              Permission is granted to temporarily access the materials on Primex Technologies&apos; website for personal,
               non-commercial viewing only. This is the grant of a license, not a transfer of title.
             </p>
           </section>
@@ -55,7 +55,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">5. Limitation of Liability</h2>
             <p>
-              PrimeX Ltd shall not be liable for any indirect, incidental, special, consequential or punitive 
+              Primex Technologies shall not be liable for any indirect, incidental, special, consequential or punitive
               damages resulting from your use of or inability to use the service.
             </p>
           </section>
@@ -63,7 +63,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">6. Modifications</h2>
             <p>
-              PrimeX Ltd reserves the right to revise these terms at any time. By using this website and our 
+              Primex Technologies reserves the right to revise these terms at any time. By using this website and our
               services, you agree to be bound by the current version of these terms.
             </p>
           </section>

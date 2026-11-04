@@ -1,98 +1,61 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { products } from '@/lib/products';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSystemsOpen, setIsSystemsOpen] = useState(false);
   const pathname = usePathname();
-  const isTransparentPage = ['/', '/about', '/erp', '/contact'].includes(pathname);
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'ERP Ecosystem', href: '/erp' },
-    { name: 'Contact', href: '/contact' },
-  ];
+  const closeMenus = () => {
+    setIsMenuOpen(false);
+    setIsSystemsOpen(false);
+  };
 
   return (
-    <nav className={`${isTransparentPage ? 'bg-transparent shadow-none absolute w-full' : 'bg-white shadow-md sticky'} top-0 z-50`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Image 
-                src={isTransparentPage ? '/logo-white.png' : '/logo.png'} 
-                alt="PrimeX Logo" 
-                width={320} 
-                height={133}
-                className="h-32 w-auto"
-                priority
-              />
-            </Link>
-          </div>
+    <header className="site-header">
+      <nav className="container nav-layout" aria-label="Main navigation">
+        <Link href="/" className="brand-lockup" aria-label="Primex Technologies home" onClick={closeMenus}>
+          <span className="brand-mark"><Image src="/brand/primex-mark.png" alt="" width={54} height={54} priority /></span>
+          <span className="brand-name">Primex <span>Technologies</span></span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`${isTransparentPage ? 'text-white hover:text-blue-100' : 'text-gray-700 hover:text-blue-900'} transition-colors duration-200 font-medium`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`${isTransparentPage ? 'text-white hover:text-blue-100' : 'text-gray-700 hover:text-blue-900'} focus:outline-none`}
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isMenuOpen ? (
-                  <path d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+        <div className="desktop-nav">
+          <Link className={pathname === '/' ? 'nav-link nav-link-active' : 'nav-link'} href="/">Home</Link>
+          <div className="nav-dropdown">
+            <button type="button" className={pathname.startsWith('/systems') ? 'nav-link nav-link-active nav-dropdown-trigger' : 'nav-link nav-dropdown-trigger'} aria-expanded={isSystemsOpen} onClick={() => setIsSystemsOpen(!isSystemsOpen)}>
+              Our Softwares <span className="nav-chevron">⌄</span>
             </button>
+            {isSystemsOpen && (
+              <div className="nav-dropdown-menu">
+                <Link href="/systems" className="nav-dropdown-all" onClick={closeMenus}>Explore all systems <span aria-hidden="true">↗</span></Link>
+                {products.map((product) => <Link href={`/systems/${product.slug}`} key={product.slug} onClick={closeMenus}>{product.name}<span aria-hidden="true">→</span></Link>)}
+              </div>
+            )}
           </div>
+          <Link className={pathname === '/about' ? 'nav-link nav-link-active' : 'nav-link'} href="/about">About</Link>
+          <Link className={pathname === '/contact' ? 'nav-link nav-link-active' : 'nav-link'} href="/contact">Contact</Link>
+          <Link className="button button-primary nav-cta" href="/contact">Let’s talk <span aria-hidden="true">↗</span></Link>
         </div>
-      </div>
 
-      {/* Mobile menu */}
+        <button type="button" className="mobile-menu-toggle" aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMenuOpen} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span /><span />
+        </button>
+      </nav>
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors duration-200"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+        <div className="mobile-nav">
+          <Link href="/" onClick={closeMenus}>Home</Link>
+          <Link href="/systems" onClick={closeMenus}>Systems / Softwares</Link>
+          <div className="mobile-product-links">{products.map((product) => <Link href={`/systems/${product.slug}`} key={product.slug} onClick={closeMenus}>{product.name}<span aria-hidden="true">→</span></Link>)}</div>
+          <Link href="/about" onClick={closeMenus}>About</Link>
+          <Link href="/contact" onClick={closeMenus}>Contact</Link>
+          <Link className="button button-primary" href="/contact" onClick={closeMenus}>Let’s talk <span aria-hidden="true">↗</span></Link>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
-

@@ -1,155 +1,43 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us - PrimeX Ltd',
-  description: 'Learn about PrimeX Ltd and how we build PrimeX ERP with integrated eCommerce, WaaS services, and mobile app solutions for modern businesses.',
+  title: 'About Primex',
+  description: 'Meet Primex Technologies: a technology company focused on useful software, business automation and solutions tailored to each client.',
 };
 
+const principles = [
+  { number: '01', title: 'Understand first', description: 'We start with your business, the people behind it and the work you want technology to improve.' },
+  { number: '02', title: 'Make it useful', description: 'We focus on clear, practical systems that solve real operational challenges.' },
+  { number: '03', title: 'Build together', description: 'We work with you to shape the right product, service and level of support.' },
+];
+
 export default function AboutPage() {
-  const values = [
-    {
-      title: "Innovation",
-      description: "Building modern, forward-thinking systems."
-    },
-    {
-      title: "Excellence",
-      description: "Delivering high-quality, reliable solutions."
-    },
-    {
-      title: "Scalability",
-      description: "Designing systems that grow with clients' needs."
-    },
-    {
-      title: "Impact",
-      description: "Creating technology that solves real-world problems."
-    },
-    {
-      title: "Integrity",
-      description: "Operating with transparency and trust."
-    }
-  ];
-
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <Image
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVzaW5lc3MscHJvZmVzc2lvbmFsLHRlY2h8fHx8fHwxNzc0Nzg2NTg4&ixlib=rb-4.0.3&q=80&w=1920"
-          alt="Diverse team celebrating success"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About PrimeX Ltd
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Building practical digital products including PrimeX ERP with integrated eCommerce, WaaS, and mobile applications
-            </p>
-          </div>
+    <div className="about-page">
+      <section className="about-hero">
+        <div className="container about-hero-inner">
+          <p className="eyebrow">About Primex Technologies</p>
+          <h1>Technology is only powerful<br />when it works for <span>people.</span></h1>
+          <p>Primex Technologies is a technology company focused on practical software and business automation. We work across technology sectors, starting with software solutions that help businesses operate with greater clarity.</p>
+          <Link href="/systems" className="button button-primary">Explore our systems <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
-
-      {/* Mission & Vision */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-blue-50 p-8 rounded-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-              <p className="text-lg text-gray-600">
-                To partner with organizations to understand their needs and build intelligent systems
-                that support long-term growth, operational transparency, and sustainable digital transformation.
-              </p>
-            </div>
-            <div className="bg-blue-50 p-8 rounded-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
-              <p className="text-lg text-gray-600">
-                Empowering industries with efficient, user-friendly, and scalable artificial intelligence
-                technologies.
-              </p>
-            </div>
-          </div>
+      <section className="section about-story">
+        <div className="container about-story-layout">
+          <div><p className="eyebrow">Our focus</p><h2>Start with the challenge.<br /><span>Build what helps.</span></h2></div>
+          <div className="about-story-copy"><p>Businesses deserve technology that fits the way they work. We create software products for retail, education and fitness, and we partner with clients who need custom systems shaped around their own operations.</p><p>Our work begins with understanding your needs. From there, we help you explore the right solution, whether that’s a ready-to-use product, a subscription, a one-time software purchase or a tailored build.</p><p>Software is where we’re starting. Our ambition is to keep growing as a technology partner for businesses and organisations.</p></div>
         </div>
       </section>
-
-      {/* Story Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Our Story
-            </h2>
-            <div className="space-y-6 text-lg text-gray-600">
-              <p>
-                PrimeX Ltd is focused on developing PrimeX ERP, a unified platform that helps organizations
-                manage operations efficiently with integrated eCommerce capabilities.
-              </p>
-              <p>
-                Our ecosystem brings together key business functions including operations, human resources,
-                finance, inventory, analytics, and online sales, eliminating fragmented tools and manual
-                processes that slow growth.
-              </p>
-              <p>
-                We also deliver WaaS and mobile app development services to help businesses extend their
-                digital reach while keeping operations connected.
-              </p>
-              <p>
-                At PrimeX, we go beyond software development by partnering with clients and building
-                systems that support measurable and sustainable digital transformation.
-              </p>
-            </div>
-          </div>
+      <section className="section about-principles">
+        <div className="container">
+          <div className="section-heading"><p className="eyebrow">How we work</p><h2>Built around <span>your business.</span></h2></div>
+          <div className="about-principle-grid">{principles.map((principle) => <article className="about-principle" key={principle.number}><span>{principle.number}</span><h3>{principle.title}</h3><p>{principle.description}</p></article>)}</div>
         </div>
       </section>
-
-      {/* Core Values */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Our Core Values
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg">
-                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white font-bold">{value.title[0]}</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className="closing-cta">
+        <div className="container closing-cta-inner"><div><p className="eyebrow eyebrow-light">Let’s build something useful</p><h2>Have a business<br />challenge in mind?</h2></div><div className="closing-cta-action"><p>Tell us what you’re working on. We’ll help you explore a practical way forward.</p><Link href="/contact" className="button button-light">Talk to Primex <span aria-hidden="true">↗</span></Link></div></div>
       </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-blue-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
-            <div>
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-blue-100">Active Clients</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">15+</div>
-              <div className="text-blue-100">Countries</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">99.9%</div>
-              <div className="text-blue-100">Uptime</div>
-            </div>
-            <div>
-              <div className="text-5xl font-bold mb-2">24/7</div>
-              <div className="text-blue-100">Support</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
-

@@ -10,13 +10,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PrimeX Ltd - Business Solutions for Modern Companies",
-  description: "PrimeX Ltd provides ERP systems, Website as a Service (WaaS), SaaS-ready platforms, and website management services for modern businesses.",
-  keywords: ["ERP", "Enterprise Resource Planning", "Business Solutions", "WaaS", "Website as a Service", "SaaS", "Software as a Service", "Website Management", "POS", "Fleet Management", "HR", "Payroll", "Accounting"],
+  title: {
+    default: "Primex Technologies | Software for better business",
+    template: "%s | Primex Technologies",
+  },
+  description: "Primex Technologies builds practical software and business automation solutions, tailored to the way your business works.",
+  keywords: ["Primex Technologies", "business software", "business automation", "PrimePOS", "PrimeSchool", "Gym Management System", "PrimeFit", "custom software"],
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: "/brand/primex-mark.png",
+    shortcut: "/brand/primex-mark.png",
+    apple: "/brand/primex-mark.png",
   },
 };
 

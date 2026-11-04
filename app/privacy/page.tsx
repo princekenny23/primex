@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - PrimeX Ltd',
-  description: 'Privacy Policy for PrimeX Ltd',
+  title: 'Privacy Policy',
+  description: 'Privacy Policy for Primex Technologies.',
 };
 
 export default function PrivacyPage() {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Introduction</h2>
             <p>
-              PrimeX Ltd ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
+              Primex Technologies (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your information when you visit our website 
               or use our services.
             </p>
