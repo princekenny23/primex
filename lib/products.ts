@@ -85,25 +85,6 @@ export const products: Product[] = [
     ],
     benefits: ['Keep membership details in one place', 'Make renewals easier to follow up', 'Understand attendance patterns', 'Create workflows that suit your gym'],
   },
-  {
-    slug: 'primefit',
-    name: 'PrimeFit',
-    shortMark: 'F',
-    category: 'Fitness & wellbeing',
-    tagline: 'A focused fitness experience for your members and team.',
-    overview: 'PrimeFit is a digital fitness solution designed to support the connection between your business and its members. Tell us how you work and we can tailor the experience to your services and goals.',
-    audience: 'Fitness providers and businesses building digital wellness experiences.',
-    featureHeadline: 'See the whole experience, not just the workout.',
-    featureIntro: 'From member access to programmes and progress, PrimeFit connects the moving parts of your fitness service.',
-    features: ['Member access and profiles', 'Fitness programme organisation', 'Progress and activity visibility', 'Flexible service configuration', 'Business and member workflows', 'Customisable to your needs'],
-    featureShowcase: [
-      { label: 'Members', summary: 'Connect with your people', title: 'A more connected member experience.', description: 'Organise member access and profiles around the services you offer.' },
-      { label: 'Programmes', summary: 'Organise your offering', title: 'Bring fitness programmes together.', description: 'Keep programmes organised in a clear workflow for your team.' },
-      { label: 'Progress', summary: 'Follow every milestone', title: 'Make activity easier to follow.', description: 'Keep member activity and progress visible as they work toward their goals.' },
-      { label: 'Your service', summary: 'Work your way', title: 'Shape the experience around your business.', description: 'Configure workflows to fit your services and the way your business works.' },
-    ],
-    benefits: ['Offer members a more connected experience', 'Bring fitness services into a clear workflow', 'Adapt the platform as your offering grows', 'Discuss a subscription or tailored build'],
-  },
 ];
 
 export function getProduct(slug: string) {

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Primex Technologies",
   },
   description: "Primex Technologies builds practical software and business automation solutions, tailored to the way your business works.",
-  keywords: ["Primex Technologies", "business software", "business automation", "PrimePOS", "PrimeSchool", "Gym Management System", "PrimeFit", "custom software"],
+  keywords: ["Primex Technologies", "business software", "business automation", "PrimePOS", "PrimeSchool", "Gym Management System", "custom software"],
   icons: {
     icon: "/brand/primex-mark.png",
     shortcut: "/brand/primex-mark.png",

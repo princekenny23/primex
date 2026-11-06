@@ -20,7 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - `/systems/primepos` — PrimePOS product overview
 - `/systems/primeschool` — PrimeSchool product overview
 - `/systems/gym-management-system` — Gym Management System product overview
-- `/systems/primefit` — PrimeFit product overview
 - `/about` — About Primex Technologies
 - `/contact` — Demo, pricing and custom-solution enquiries
 - `/privacy` and `/terms` — Privacy and service terms
