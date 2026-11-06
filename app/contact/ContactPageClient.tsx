@@ -63,7 +63,7 @@ export default function ContactPageClient({ initialMessage, enquiryContext }: { 
             <p>Whether you’re looking for a product demo, pricing information or a tailored system, we’d love to hear from you.</p>
             {enquiryContext && <div className="contact-context"><span>YOUR ENQUIRY</span><strong>{enquiryContext}</strong></div>}
             <div className="contact-methods">
-              <a href="mailto:primexltd876@gmail.com" className="contact-method"><span className="contact-method-icon">@</span><span><small>Email us</small><strong>primexltd876@gmail.com</strong></span><span className="contact-method-arrow">↗</span></a>
+              <a href="mailto:info@primeposs.com" className="contact-method"><span className="contact-method-icon">@</span><span><small>Email us</small><strong>info@primeposs.com</strong></span><span className="contact-method-arrow">↗</span></a>
               <a href="https://wa.me/265997575865" className="contact-method"><span className="contact-method-icon">↗</span><span><small>WhatsApp</small><strong>+265 997 575 865</strong></span><span className="contact-method-arrow">↗</span></a>
               <div className="contact-method"><span className="contact-method-icon">⌖</span><span><small>Based in</small><strong>Lilongwe, Malawi</strong></span></div>
             </div>

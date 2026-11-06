@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
     await transporter.sendMail({
       from: process.env.SMTP_FROM,
-      to: 'primexltd876@gmail.com',
+      to: 'info@primeposs.com',
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>

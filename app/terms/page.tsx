@@ -73,7 +73,7 @@ export default function TermsPage() {
             <p>
               For questions about these Terms of Service, please contact:
               <br />
-              Email: primexltd876@gmail.com
+              Email: info@primeposs.com
               <br />
               Phone: +265 997575865
             </p>

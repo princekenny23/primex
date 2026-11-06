@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             <p>
               If you have questions about this Privacy Policy, please contact us at:
               <br />
-              Email: primexltd876@gmail.com
+              Email: info@primeposs.com
               <br />
               Phone: +265 997575865
             </p>

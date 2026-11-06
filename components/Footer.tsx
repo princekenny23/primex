@@ -13,7 +13,7 @@ export default function Footer() {
               <span className="brand-name">Primex <span>Technologies</span></span>
             </Link>
             <p>Thoughtful software and technology solutions that help businesses work smarter and grow with confidence.</p>
-            <a className="footer-email" href="mailto:primexltd876@gmail.com">primexltd876@gmail.com <span aria-hidden="true">↗</span></a>
+            <a className="footer-email" href="mailto:info@primeposs.com">info@primeposs.com <span aria-hidden="true">↗</span></a>
           </div>
           <div className="footer-links">
             <h2>Explore</h2>
